@@ -1,16 +1,14 @@
 import json
 
+from template_generator import template_generator
+from config_service import ConfigService
+
+
 mocked_response = json.dumps({
     "platform_name": "AwesomeMarketplace",
     "body_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
 })
 
-configuration_template = {
-    "platform_name":"",
-    "site_title": "",
-    "body_text": "",
-    "footer": {
-        "footer_header": "",
-        "footer_body": "",
-    },
-}
+
+if __name__ == "__main__":
+    pass
