@@ -16,4 +16,9 @@ def template_generator(*args, **kwargs):
             "footer_header": "Copyright by {}".format(kwargs['platform_name']),
         },
     }
+
+    new_fields = list(set(kwargs).difference(set(template_required_fields)))
+    if len(new_fields) > 0:
+        for field in new_fields:
+            configuration_template.update({field: kwargs[field]})
     return configuration_template
