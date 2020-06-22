@@ -7,7 +7,7 @@ QUESTIONS_MAP = {
     "lUSCoWCfRBjz": "platform_name",
     "xzEOKIHDo4SA": "body_text",
 }
-QUESTIONNAIRE_ID = 1
+QUESTIONNAIRE_ID = 0
 
 class APIService:
     def __init__(self, url, token, questions_map, questionnaire_id):
@@ -29,7 +29,10 @@ class APIService:
         key_value_arguments = {}
         for answer in answers:
             answer_id = answer['field']['id']
-            alias_name = self.questions_map[answer_id]
+            try:
+                alias_name = self.questions_map[answer_id]
+            except:
+                alias_name = answer_id
             key_value_arguments.update({alias_name: answer['text']})
         return key_value_arguments
 
