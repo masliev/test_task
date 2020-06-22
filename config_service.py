@@ -1,18 +1,18 @@
-import json
-
+from api_service import api_service
+from template_generator import template_generator 
 
 class ConfigService:
 
-    def __init__(self, questionnaire_data, config_template):
-        self.input_data = self._parsed_api_response(questionnaire_data)
-        self.config_template = config_template
+    def __init__(self, api_service, template_generator):
+        api_service = api_service
+        self.answers = self._get_answers()
+        self.template_generator = template_generator
 
-    def _parsed_api_response(self, questionnaire_data):
-        return json.loads(questionnaire_data)
+    def _get_answers(self):
+        return api_service.prepared_results()
 
     def create_config(self):
-        pass
+        return self.template_generator(**self.answers)
 
     def update_config(self):
         pass
-
