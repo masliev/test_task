@@ -3,14 +3,13 @@ from functools import lru_cache
 
 URL = "https://api.typeform.com/forms/j9oU327F/responses"
 TOKEN = "5smhCM5PaTWX1aEnKkyBxKMjZa23tpAaLdGjshmxPXAt"
-
-questions_map = {
+QUESTIONS_MAP = {
     "lUSCoWCfRBjz": "platform_name",
     "xzEOKIHDo4SA": "body_text",
 }
 
 class APIService:
-    def __init__(self, url, token, questions_map):
+    def __init__(self, url, token, QUESTIONS_MAP):
         self.url = url
         self.token = token
         self.questions_map = questions_map
