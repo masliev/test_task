@@ -16,3 +16,9 @@ class ConfigService:
 
     def update_config(self):
         pass
+
+
+def config_service_factory(api_service, template_generator):
+    return ConfigService(api_service, template_generator)
+
+service = config_service_factory(api_service, template_generator)
