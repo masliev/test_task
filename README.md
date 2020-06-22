@@ -12,12 +12,14 @@ For the template things I used python dict because it's easy to control, memory-
 ## Important notes
 Firstly I prepared questionnarie with 2 questions
 ![alt text](https://i.imgur.com/BS11f69.png)
+
 this template generated from answers based on this two questions
 ![alt text](https://i.imgur.com/vh5zqeK.png)
 
 
 then I extended it with one more question
 ![alt text](https://i.imgur.com/6Q3CzCd.png)
+
 This template generated from answers based on three questions. Instead of getting an error I prepared services to handle unexpected field by adding it to the template but with just an internal typeform id of the answer.
 ![alt text](https://i.imgur.com/2DymRMf.png)
 
