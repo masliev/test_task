@@ -9,7 +9,7 @@ QUESTIONS_MAP = {
 }
 
 class APIService:
-    def __init__(self, url, token, QUESTIONS_MAP):
+    def __init__(self, url, token, questions_map):
         self.url = url
         self.token = token
         self.questions_map = questions_map
@@ -29,3 +29,8 @@ class APIService:
             key_value_arguments.update({alias_name: answer['text']})
         return key_value_arguments
 
+
+def apiservice_factory(url, token, questions_map):
+    return APIService(url, token, questions_map)
+
+api_service = apiservice_factory(URL, TOKEN, QUESTIONS_MAP)
