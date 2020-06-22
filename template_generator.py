@@ -6,7 +6,7 @@ def template_generator(*args, **kwargs):
         try: 
             kwargs[i]
         except KeyError:
-            raise Exception('Required fields are empty, required fields is {}'\
+            raise Exception('Required fields are empty, required fields are {}'\
                             .format(template_required_fields))
     configuration_template = {
         "platform_name":"{}".format(kwargs['platform_name']),
